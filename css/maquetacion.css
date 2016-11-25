@@ -1,0 +1,149 @@
+/*reset*/
+/*etiquetas*/
+/*keyframes*/
+/*contenedores layouts*/
+/*header, aside, ...*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+
+    color: deeppink;
+}
+
+header {
+    background-color: lightgray;
+    width: 100%;
+    padding: 20px;
+    /*Flex*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+}
+header img{
+    width: 45px;
+    vertical-align: baseline;
+}
+
+header .logo{
+    font-size: 2em;
+}
+
+header .logo a{
+
+    position: relative;/*se puede hacer con line-height:72px tambien*/
+    left: 5px;
+    bottom: 2px;
+}
+
+header #mainNav{
+    width: 50%; /* para al hacer la pantalla mas pequeña utilizar media query*/
+    background-color: orange;
+    /*Flex*/
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+header #mainNav a{
+    text-align: center;
+    padding: 5px 0;
+    font-size: 1.2em;
+}
+
+
+header #sidenav{
+    display: none;
+}
+
+section.main {
+    background-color: beige;
+    width: 60%;
+    padding: 20px;
+}
+
+aside {
+    background-color: red;
+    padding: 20px;
+    width: 40%;
+}
+
+footer {
+    background-color: palegreen;
+    width: 100%;
+}
+
+.imagen {
+    width: 150px;
+    height: 150px;
+    background-color: orange;
+}
+
+.widget {
+    padding: 10px;
+}
+
+.contenedor {
+    background-color: #CCC;
+    max-width: 1000px;/*mejor a 1024*/
+    width: 90%;
+    margin: auto;
+    /*Flex*/
+    display: flex;
+    flex-flow: row wrap;
+}
+
+@media only screen and (max-width: 425px){
+    header #mainNav{
+        display: none;
+    }
+    header #sidenav{
+        height: 100%; /* 100% Full-height */
+        width: 0; /* 0 width - change this with JavaScript */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Stay on top */
+        top: 0;
+        left: 0;
+        background-color: #111; /* Black*/
+        overflow-x: hidden; /* Disable horizontal scroll */
+        padding-top: 60px; /* Place content 60px from the top */
+        transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+        display: flex;
+        flex-direction: column;
+
+    }
+    header #sidenav a{
+        text-align: center;
+        font-size: 1.5em;
+        margin-bottom: 2%;
+    }
+    header #sidenav a.closebtn{
+        font-size: 3em;
+        position: absolute;
+        top: 0;
+        right: 6%;
+    }
+
+    header nav{
+        width: 100%;
+        flex-flow: column wrap;
+        text-align: center;
+        padding: 5px 0;
+        font-size: 1.2em;
+    }
+
+    section.main, aside{
+        width: 100%;
+    }
+
+
+}
